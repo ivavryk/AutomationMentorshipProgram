@@ -1,0 +1,11 @@
+C:\Users\ivavryk\source\repos\ControlStatements\ControlStatements\bin\Debug\netcoreapp3.0\ControlStatements.exe
+C:\Users\ivavryk\source\repos\ControlStatements\ControlStatements\bin\Debug\netcoreapp3.0\ControlStatements.deps.json
+C:\Users\ivavryk\source\repos\ControlStatements\ControlStatements\bin\Debug\netcoreapp3.0\ControlStatements.runtimeconfig.json
+C:\Users\ivavryk\source\repos\ControlStatements\ControlStatements\bin\Debug\netcoreapp3.0\ControlStatements.runtimeconfig.dev.json
+C:\Users\ivavryk\source\repos\ControlStatements\ControlStatements\bin\Debug\netcoreapp3.0\ControlStatements.dll
+C:\Users\ivavryk\source\repos\ControlStatements\ControlStatements\bin\Debug\netcoreapp3.0\ControlStatements.pdb
+C:\Users\ivavryk\source\repos\ControlStatements\ControlStatements\obj\Debug\netcoreapp3.0\ControlStatements.csprojAssemblyReference.cache
+C:\Users\ivavryk\source\repos\ControlStatements\ControlStatements\obj\Debug\netcoreapp3.0\ControlStatements.AssemblyInfoInputs.cache
+C:\Users\ivavryk\source\repos\ControlStatements\ControlStatements\obj\Debug\netcoreapp3.0\ControlStatements.AssemblyInfo.cs
+C:\Users\ivavryk\source\repos\ControlStatements\ControlStatements\obj\Debug\netcoreapp3.0\ControlStatements.dll
+C:\Users\ivavryk\source\repos\ControlStatements\ControlStatements\obj\Debug\netcoreapp3.0\ControlStatements.pdb
