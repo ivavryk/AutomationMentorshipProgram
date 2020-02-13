@@ -1,0 +1,11 @@
+C:\Users\ivavryk\source\repos\WorkerPerson\bin\Debug\netcoreapp3.0\WorkerPerson.exe
+C:\Users\ivavryk\source\repos\WorkerPerson\bin\Debug\netcoreapp3.0\WorkerPerson.deps.json
+C:\Users\ivavryk\source\repos\WorkerPerson\bin\Debug\netcoreapp3.0\WorkerPerson.runtimeconfig.json
+C:\Users\ivavryk\source\repos\WorkerPerson\bin\Debug\netcoreapp3.0\WorkerPerson.runtimeconfig.dev.json
+C:\Users\ivavryk\source\repos\WorkerPerson\bin\Debug\netcoreapp3.0\WorkerPerson.dll
+C:\Users\ivavryk\source\repos\WorkerPerson\bin\Debug\netcoreapp3.0\WorkerPerson.pdb
+C:\Users\ivavryk\source\repos\WorkerPerson\obj\Debug\netcoreapp3.0\WorkerPerson.AssemblyInfoInputs.cache
+C:\Users\ivavryk\source\repos\WorkerPerson\obj\Debug\netcoreapp3.0\WorkerPerson.AssemblyInfo.cs
+C:\Users\ivavryk\source\repos\WorkerPerson\obj\Debug\netcoreapp3.0\WorkerPerson.dll
+C:\Users\ivavryk\source\repos\WorkerPerson\obj\Debug\netcoreapp3.0\WorkerPerson.pdb
+C:\Users\ivavryk\source\repos\WorkerPerson\obj\Debug\netcoreapp3.0\WorkerPerson.csprojAssemblyReference.cache
