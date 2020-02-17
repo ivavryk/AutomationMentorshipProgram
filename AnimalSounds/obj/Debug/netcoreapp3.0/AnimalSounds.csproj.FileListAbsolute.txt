@@ -1,0 +1,11 @@
+C:\Users\ivavryk\source\repos\AnimalSounds\bin\Debug\netcoreapp3.0\AnimalSounds.exe
+C:\Users\ivavryk\source\repos\AnimalSounds\bin\Debug\netcoreapp3.0\AnimalSounds.deps.json
+C:\Users\ivavryk\source\repos\AnimalSounds\bin\Debug\netcoreapp3.0\AnimalSounds.runtimeconfig.json
+C:\Users\ivavryk\source\repos\AnimalSounds\bin\Debug\netcoreapp3.0\AnimalSounds.runtimeconfig.dev.json
+C:\Users\ivavryk\source\repos\AnimalSounds\bin\Debug\netcoreapp3.0\AnimalSounds.dll
+C:\Users\ivavryk\source\repos\AnimalSounds\bin\Debug\netcoreapp3.0\AnimalSounds.pdb
+C:\Users\ivavryk\source\repos\AnimalSounds\obj\Debug\netcoreapp3.0\AnimalSounds.csprojAssemblyReference.cache
+C:\Users\ivavryk\source\repos\AnimalSounds\obj\Debug\netcoreapp3.0\AnimalSounds.AssemblyInfoInputs.cache
+C:\Users\ivavryk\source\repos\AnimalSounds\obj\Debug\netcoreapp3.0\AnimalSounds.AssemblyInfo.cs
+C:\Users\ivavryk\source\repos\AnimalSounds\obj\Debug\netcoreapp3.0\AnimalSounds.dll
+C:\Users\ivavryk\source\repos\AnimalSounds\obj\Debug\netcoreapp3.0\AnimalSounds.pdb
