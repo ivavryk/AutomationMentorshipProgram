@@ -1,0 +1,11 @@
+C:\Users\ivavryk\source\repos\Oop\bin\Debug\netcoreapp3.0\Oop.exe
+C:\Users\ivavryk\source\repos\Oop\bin\Debug\netcoreapp3.0\Oop.deps.json
+C:\Users\ivavryk\source\repos\Oop\bin\Debug\netcoreapp3.0\Oop.runtimeconfig.json
+C:\Users\ivavryk\source\repos\Oop\bin\Debug\netcoreapp3.0\Oop.runtimeconfig.dev.json
+C:\Users\ivavryk\source\repos\Oop\bin\Debug\netcoreapp3.0\Oop.dll
+C:\Users\ivavryk\source\repos\Oop\bin\Debug\netcoreapp3.0\Oop.pdb
+C:\Users\ivavryk\source\repos\Oop\obj\Debug\netcoreapp3.0\Oop.csprojAssemblyReference.cache
+C:\Users\ivavryk\source\repos\Oop\obj\Debug\netcoreapp3.0\Oop.AssemblyInfoInputs.cache
+C:\Users\ivavryk\source\repos\Oop\obj\Debug\netcoreapp3.0\Oop.AssemblyInfo.cs
+C:\Users\ivavryk\source\repos\Oop\obj\Debug\netcoreapp3.0\Oop.dll
+C:\Users\ivavryk\source\repos\Oop\obj\Debug\netcoreapp3.0\Oop.pdb
