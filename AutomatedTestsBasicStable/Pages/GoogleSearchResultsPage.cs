@@ -21,9 +21,14 @@ namespace AutomatedTestsBasic.Pages
         public string SpecificSearchTitle = " - Пошук Google";
         public string RandomSearchTitle = "Google Doodles";
 
+        public IWebElement SearchResults => _driver.FindElement(By.Id("res"));
 
-        private readonly By _sectionSearchResultsBy = By.Id("res");
-
-        public IWebElement SearchResults => _driver.FindElement(_sectionSearchResultsBy);
+        /// <summary>
+        /// Wait page to load.
+        /// </summary>
+        public void WaitPageToLoad()
+        {
+            WaitPageToLoad(By.Id("res"));
+        }
     }
 }

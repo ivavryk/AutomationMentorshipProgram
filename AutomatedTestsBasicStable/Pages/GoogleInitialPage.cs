@@ -37,7 +37,7 @@ namespace AutomatedTestsBasic.Pages
         /// </summary>
         public GoogleInitialPage Open()
         {
-            _driver.Url = Url;
+            _driver.Navigate().GoToUrl(Url);
 
             return this;
         }

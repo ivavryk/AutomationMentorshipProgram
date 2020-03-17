@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace AutomatedTestsBasic.Pages
 {
@@ -25,6 +26,16 @@ namespace AutomatedTestsBasic.Pages
         public string GetPageTitle()
         {
             return _driver.Title;
+        }
+
+        /// <summary>
+        /// Wait page to load.
+        /// </summary>
+        /// <param name="by"></param>
+        public void WaitPageToLoad(By by)
+        {
+            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+            wait.Until(d => _driver.FindElements(by).Count > 0);
         }
     }
 }
