@@ -1,27 +1,18 @@
-﻿using System;
-using System.Threading;
-using AutomatedTestsBasic.Pages;
+﻿using System.Threading;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
 namespace AutomatedTestsBasic.Tests
 {
-    [TestFixture]
-    class GoogleTests
+    class GoogleTests : TestsBasis
     {
-        static IWebDriver _driver;
-
-        Pages.Pages Pages;
-        
         [SetUp]
-        public void StartBrowser()
+        public void PreConditions()
         {
-            _driver = new ChromeDriver();
+            BrowserToUse(Browser.Chrome);
 
-            _driver.Manage().Window.FullScreen();
-
-            Pages = new Pages.Pages(_driver);
+            OpenFullScreen();
         }
 
         [Test]
@@ -46,8 +37,7 @@ namespace AutomatedTestsBasic.Tests
                 .Open()
                 .ApplyRandomSearch();
 
-            // TODO: change to a correct waiter.
-            Thread.Sleep(2000);
+            Pages.GoogleSearchResultsPage.WaitPageToLoad();
 
             Assert.AreEqual(Pages.GoogleSearchResultsPage.RandomSearchTitle, Pages.GoogleSearchResultsPage.GetPageTitle());
         }
@@ -59,21 +49,21 @@ namespace AutomatedTestsBasic.Tests
                 .Open()
                 .ApplyRandomSearch();
 
-            _driver.Navigate().Back();
-            _driver.Navigate().Forward();
-            _driver.Navigate().Back();
-            _driver.Navigate().Refresh();
+            NavigateBackInBrowser();
+            NavigateForwardInBrowser();
+            NavigateBackInBrowser();
+            RefreshPageInBrowser();
 
-            Assert.AreEqual(Pages.GoogleInitialPage.Title, _driver.Title, $"Page title is incorrect.\nPage source: {_driver.PageSource}");
+            Assert.AreEqual(Pages.GoogleInitialPage.Title, GetBrowserTitle(), $"Page title is incorrect.\nPage source: {GetPageSource()}");
             Assert.IsTrue(Pages.GoogleInitialPage.TxtSearch.Displayed && Pages.GoogleInitialPage.TxtSearch.Enabled);
             Assert.IsTrue(Pages.GoogleInitialPage.BtnSearch.Displayed && Pages.GoogleInitialPage.BtnSearch.Enabled);
             Assert.IsTrue(Pages.GoogleInitialPage.BtnRandomSearch.Displayed && Pages.GoogleInitialPage.BtnRandomSearch.Enabled);
         }
 
         [TearDown]
-        public void CloseBrowser()
+        public void PostConditions()
         {
-            _driver.Quit();
+            base.CloseBrowser();
         }
     }
 }
