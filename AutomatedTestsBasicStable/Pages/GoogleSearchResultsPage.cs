@@ -13,7 +13,7 @@ namespace AutomatedTestsBasic.Pages
         /// <param name="driver"></param>
         public GoogleSearchResultsPage(IWebDriver driver) : base(driver)
         {
-            _driver = driver;
+            _driver = Tests.TestsBasis._driver;
         }
 
         private readonly IWebDriver _driver;
@@ -28,7 +28,7 @@ namespace AutomatedTestsBasic.Pages
         /// </summary>
         public void WaitPageToLoad()
         {
-            WaitPageToLoad(By.Id("res"));
+            WaitPageToLoad(By.Id("content-wrap"));
         }
     }
 }

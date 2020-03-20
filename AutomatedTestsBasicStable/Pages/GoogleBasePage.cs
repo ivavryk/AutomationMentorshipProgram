@@ -12,9 +12,9 @@ namespace AutomatedTestsBasic.Pages
         /// Google base page constructor.
         /// </summary>
         /// <param name="driver"></param>
-        protected GoogleBasePage(IWebDriver driver)
+        internal GoogleBasePage(IWebDriver driver)
         {
-            _driver = driver;
+            _driver = Tests.TestsBasis._driver;
         }
 
         private readonly IWebDriver _driver;
@@ -36,6 +36,64 @@ namespace AutomatedTestsBasic.Pages
         {
             var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
             wait.Until(d => _driver.FindElements(by).Count > 0);
+        }
+
+        /// <summary>
+        /// Get browser title.
+        /// </summary>
+        /// <returns></returns>
+        public string GetBrowserTitle()
+        {
+            return _driver.Title;
+        }
+
+        /// <summary>
+        /// Get page source.
+        /// </summary>
+        /// <returns></returns>
+        public string GetPageSource()
+        {
+            return _driver.PageSource;
+        }
+
+        /// <summary>
+        /// Open full screen.
+        /// </summary>
+        public void OpenFullScreen()
+        {
+            _driver.Manage().Window.FullScreen();
+        }
+
+        /// <summary>
+        /// Close browser.
+        /// </summary>
+        public void CloseBrowser()
+        {
+            _driver.Quit();
+        }
+
+        /// <summary>
+        /// Navigate back in browser,
+        /// </summary>
+        public void NavigateBackInBrowser()
+        {
+            _driver.Navigate().Back();
+        }
+
+        /// <summary>
+        /// Navigate forward in browser.
+        /// </summary>
+        public void NavigateForwardInBrowser()
+        {
+            _driver.Navigate().Forward();
+        }
+
+        /// <summary>
+        /// Refresh page in browser.
+        /// </summary>
+        public void RefreshPageInBrowser()
+        {
+            _driver.Navigate().Refresh();
         }
     }
 }

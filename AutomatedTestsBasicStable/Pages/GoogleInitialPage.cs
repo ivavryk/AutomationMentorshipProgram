@@ -13,7 +13,7 @@ namespace AutomatedTestsBasic.Pages
      /// <param name="driver"></param>
         public GoogleInitialPage(IWebDriver driver) : base(driver)
         {
-            _driver = driver;
+            _driver = Tests.TestsBasis._driver;
         }
 
         private readonly IWebDriver _driver;
