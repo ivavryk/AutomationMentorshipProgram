@@ -2,13 +2,32 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Edge;
+using NUnit.Framework;
 
 namespace AutomatedTestsBasic.Tests
 {
     class TestsBasis
     {
-        static IWebDriver _driver = new ChromeDriver();
+        public static IWebDriver _driver;
 
+        public Pages.Pages Pages = new Pages.Pages(_driver);
+
+        [SetUp]
+        public void PreConditions()
+        {
+            BrowserToUse(Browser.Chrome);
+
+            Pages.GoogleBasePage.OpenFullScreen();
+        }
+
+        [TearDown]
+        public void PostConditions()
+        {
+            Pages.GoogleBasePage.CloseBrowser();
+        }
+
+
+        // TODO: Move to app config file.
         public void BrowserToUse(Browser browser)
         {
             switch (browser)
@@ -34,43 +53,6 @@ namespace AutomatedTestsBasic.Tests
             Firefox,
             Edge
         }
-
-        public Pages.Pages Pages = new Pages.Pages(_driver);
-
-
-        public string GetBrowserTitle()
-        {
-            return _driver.Title;
-        }
-
-        public string GetPageSource()
-        {
-            return _driver.PageSource;
-        }
-
-        public void OpenFullScreen()
-        {
-            _driver.Manage().Window.FullScreen();
-        }
-
-        public void CloseBrowser()
-        {
-            _driver.Quit();
-        }
-
-        public void NavigateBackInBrowser()
-        {
-            _driver.Navigate().Back();
-        }
-
-        public void NavigateForwardInBrowser()
-        {
-            _driver.Navigate().Forward();
-        }
-
-        public void RefreshPageInBrowser()
-        {
-            _driver.Navigate().Refresh();
-        }
     }
 }
+

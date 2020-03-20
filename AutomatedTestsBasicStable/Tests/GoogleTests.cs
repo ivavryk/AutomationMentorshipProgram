@@ -5,16 +5,10 @@ using OpenQA.Selenium.Chrome;
 
 namespace AutomatedTestsBasic.Tests
 {
+    [Author("Igor")]
+    [TestFixture]
     class GoogleTests : TestsBasis
     {
-        [SetUp]
-        public void PreConditions()
-        {
-            BrowserToUse(Browser.Chrome);
-
-            OpenFullScreen();
-        }
-
         [Test]
         public void SearchWord()
         {
@@ -26,8 +20,11 @@ namespace AutomatedTestsBasic.Tests
 
             Pages.GoogleInitialPage.ApplySearch(searchWord);
 
-            Assert.AreEqual(searchWord + Pages.GoogleSearchResultsPage.SpecificSearchTitle, Pages.GoogleInitialPage.GetPageTitle());
-            Assert.IsTrue(Pages.GoogleSearchResultsPage.SearchResults.Text.Contains(searchWord));
+            Assert.AreEqual(searchWord + Pages.GoogleSearchResultsPage.SpecificSearchTitle, 
+                Pages.GoogleInitialPage.GetPageTitle(), 
+                "Incorrect page title.");
+            Assert.IsTrue(Pages.GoogleSearchResultsPage.SearchResults.Text.Contains(searchWord), 
+                "Search world is missing in the search results.");
         }
 
         [Test]
@@ -39,7 +36,9 @@ namespace AutomatedTestsBasic.Tests
 
             Pages.GoogleSearchResultsPage.WaitPageToLoad();
 
-            Assert.AreEqual(Pages.GoogleSearchResultsPage.RandomSearchTitle, Pages.GoogleSearchResultsPage.GetPageTitle());
+            Assert.AreEqual(Pages.GoogleSearchResultsPage.RandomSearchTitle, 
+                Pages.GoogleSearchResultsPage.GetPageTitle(),
+                "Incorrect page title.");
         }
 
         [Test]
@@ -49,21 +48,20 @@ namespace AutomatedTestsBasic.Tests
                 .Open()
                 .ApplyRandomSearch();
 
-            NavigateBackInBrowser();
-            NavigateForwardInBrowser();
-            NavigateBackInBrowser();
-            RefreshPageInBrowser();
+            Pages.GoogleSearchResultsPage.NavigateBackInBrowser();
+            Pages.GoogleInitialPage.NavigateForwardInBrowser();
+            Pages.GoogleSearchResultsPage.NavigateBackInBrowser();
+            Pages.GoogleInitialPage.RefreshPageInBrowser();
 
-            Assert.AreEqual(Pages.GoogleInitialPage.Title, GetBrowserTitle(), $"Page title is incorrect.\nPage source: {GetPageSource()}");
-            Assert.IsTrue(Pages.GoogleInitialPage.TxtSearch.Displayed && Pages.GoogleInitialPage.TxtSearch.Enabled);
-            Assert.IsTrue(Pages.GoogleInitialPage.BtnSearch.Displayed && Pages.GoogleInitialPage.BtnSearch.Enabled);
-            Assert.IsTrue(Pages.GoogleInitialPage.BtnRandomSearch.Displayed && Pages.GoogleInitialPage.BtnRandomSearch.Enabled);
-        }
-
-        [TearDown]
-        public void PostConditions()
-        {
-            base.CloseBrowser();
+            Assert.AreEqual(Pages.GoogleInitialPage.Title, 
+                Pages.GoogleInitialPage.GetBrowserTitle(), 
+                $"Page title is incorrect.\nPage source: {Pages.GoogleInitialPage.GetPageSource()}");
+            Assert.IsTrue(Pages.GoogleInitialPage.TxtSearch.Displayed,
+                "Search field is not displayed.");
+            Assert.IsTrue(Pages.GoogleInitialPage.BtnSearch.Displayed,
+                "Search button is not displayed.");
+            Assert.IsTrue(Pages.GoogleInitialPage.BtnRandomSearch.Displayed,
+                "Random search button is not displayed.");
         }
     }
 }
