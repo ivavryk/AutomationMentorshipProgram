@@ -10,7 +10,7 @@ namespace AutomatedTestsBasic.Pages
     {
         public Pages(IWebDriver driver)
         {
-            _driver = Tests.TestsBasis._driver;
+            _driver = Tests.GoogleTests._driver;
         }
 
         private readonly IWebDriver _driver;

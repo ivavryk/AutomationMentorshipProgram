@@ -13,21 +13,13 @@ namespace AutomatedTestsBasic.Pages
      /// <param name="driver"></param>
         public GoogleInitialPage(IWebDriver driver) : base(driver)
         {
-            _driver = Tests.TestsBasis._driver;
+            _driver = Tests.GoogleTests._driver;
         }
 
         private readonly IWebDriver _driver;
 
         public string Url = "https://www.google.com";
         public string Title = "Google";
-
-        //private readonly By _txtSearchBy = By.XPath("//div[2]/input");
-        //private readonly By _btnSearchBy = By.XPath("//div[3]/center/input[1]");
-        //private readonly By _btnRandomSearch = By.XPath("//div[3]/center/input[2]");
-        //public IWebElement TxtSearch => _driver.FindElement(_txtSearchBy);
-        //public IWebElement BtnSearch => _driver.FindElement(_btnSearchBy);
-        //public IWebElement BtnRandomSearch => _driver.FindElement(_btnRandomSearch);
-
         public IWebElement TxtSearch => _driver.FindElement(By.Name("q"));
         public IWebElement BtnSearch => _driver.FindElement(By.CssSelector("center:nth-child(1) > input[name='btnK']:nth-child(1)"));
         public IWebElement BtnRandomSearch => _driver.FindElement(By.CssSelector("center:nth-child(1) > input[name='btnI']:nth-child(2)"));
@@ -49,6 +41,7 @@ namespace AutomatedTestsBasic.Pages
         public void ApplySearch(string searchWord)
         {
             TxtSearch.SendKeys(searchWord);
+            TxtSearch.SendKeys(Keys.Escape);
             BtnSearch.Click();
         }
 

@@ -14,7 +14,7 @@ namespace AutomatedTestsBasic.Pages
         /// <param name="driver"></param>
         internal GoogleBasePage(IWebDriver driver)
         {
-            _driver = Tests.TestsBasis._driver;
+            _driver = Tests.GoogleTests._driver;
         }
 
         private readonly IWebDriver _driver;
