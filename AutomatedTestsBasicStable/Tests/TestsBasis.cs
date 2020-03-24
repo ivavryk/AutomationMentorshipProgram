@@ -1,57 +1,42 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Edge;
+﻿using AutomatedTestsBasicStable.Helper;
+using OpenQA.Selenium;
 using NUnit.Framework;
 
 namespace AutomatedTestsBasic.Tests
 {
+    [TestFixture]
     class TestsBasis
     {
         public static IWebDriver _driver;
 
-        public Pages.Pages Pages = new Pages.Pages(_driver);
+        public Pages.Pages Pages;
 
         [SetUp]
-        public void PreConditions()
+        public void SetUp()
         {
-            BrowserToUse(Browser.Chrome);
+            _driver = ConfigurationHelper.Driver();
+
+            Pages = new Pages.Pages(_driver);
 
             Pages.GoogleBasePage.OpenFullScreen();
         }
 
         [TearDown]
-        public void PostConditions()
+        public void TearDown()
         {
             Pages.GoogleBasePage.CloseBrowser();
         }
 
-
-        // TODO: Move to app config file.
-        public void BrowserToUse(Browser browser)
+        [OneTimeSetUp]
+        public void OneTimeSetUp()
         {
-            switch (browser)
-            {
-                case Browser.Chrome:
-                    _driver = new ChromeDriver();
-                    break;
-                case Browser.Firefox:
-                    _driver = new FirefoxDriver();
-                    break;
-                case Browser.Edge:
-                    _driver = new EdgeDriver();
-                    break;
-                default:
-                    _driver = new ChromeDriver();
-                    break;
-            }
+
         }
 
-        public enum Browser
+        [OneTimeTearDown]
+        public void OneTimeTearDown()
         {
-            Chrome,
-            Firefox,
-            Edge
+
         }
     }
 }

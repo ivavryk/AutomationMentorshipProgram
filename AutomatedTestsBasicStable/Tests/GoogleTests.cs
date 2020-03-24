@@ -1,33 +1,35 @@
-﻿using System.Threading;
+﻿using AutomatedTestsBasic.Pages;
 using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 
 namespace AutomatedTestsBasic.Tests
 {
-    [Author("Igor")]
     [TestFixture]
+    [Author("Igor")]
     class GoogleTests : TestsBasis
     {
         [Test]
+        [Category("Smoke")]
+        [Category("Regression")]
         public void SearchWord()
         {
             const string searchWord = "Webdriver";
 
             Pages.GoogleInitialPage.Open();
-            
+
             Assert.AreEqual(Pages.GoogleInitialPage.Title, Pages.GoogleInitialPage.GetPageTitle());
 
             Pages.GoogleInitialPage.ApplySearch(searchWord);
 
-            Assert.AreEqual(searchWord + Pages.GoogleSearchResultsPage.SpecificSearchTitle, 
-                Pages.GoogleInitialPage.GetPageTitle(), 
+            Assert.AreEqual(searchWord + Pages.GoogleSearchResultsPage.SpecificSearchTitle,
+                Pages.GoogleInitialPage.GetPageTitle(),
                 "Incorrect page title.");
-            Assert.IsTrue(Pages.GoogleSearchResultsPage.SearchResults.Text.Contains(searchWord), 
+            Assert.IsTrue(Pages.GoogleSearchResultsPage.SearchResults.Text.Contains(searchWord),
                 "Search world is missing in the search results.");
         }
 
         [Test]
+        [Category("Smoke")]
+        [Category("Regression")]
         public void RandomSearch()
         {
             Pages.GoogleInitialPage
@@ -36,12 +38,13 @@ namespace AutomatedTestsBasic.Tests
 
             Pages.GoogleSearchResultsPage.WaitPageToLoad();
 
-            Assert.AreEqual(Pages.GoogleSearchResultsPage.RandomSearchTitle, 
+            Assert.AreEqual(Pages.GoogleSearchResultsPage.RandomSearchTitle,
                 Pages.GoogleSearchResultsPage.GetPageTitle(),
                 "Incorrect page title.");
         }
 
         [Test]
+        [Category("Regression")]
         public void BrowserNavigation()
         {
             Pages.GoogleInitialPage
