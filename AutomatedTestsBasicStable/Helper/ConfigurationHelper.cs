@@ -8,7 +8,6 @@ namespace AutomatedTestsBasicStable.Helper
 {
     public static class ConfigurationHelper
     {
-
         public static IWebDriver Driver()
         {
             string browser = GetConfigParameterValue("Browser");
