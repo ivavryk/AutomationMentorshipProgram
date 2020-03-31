@@ -10,7 +10,7 @@ namespace AutomatedTestsBasic.Pages
         private readonly IWebDriver _driver = Tests.TestsBasis.Driver;
 
         public string SpecificSearchTitle = " - Пошук Google";
-        public string RandomSearchTitle = "Дудли Google";
+        public string RandomSearchTitle = "Google Doodles";
 
         public IWebElement SearchResults => _driver.FindElement(By.Id("res"));
 

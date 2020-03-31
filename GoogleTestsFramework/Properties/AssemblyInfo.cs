@@ -37,4 +37,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 // Quantity of parallel test run.
-[assembly: LevelOfParallelism(3)]
+[assembly: LevelOfParallelism(4)]

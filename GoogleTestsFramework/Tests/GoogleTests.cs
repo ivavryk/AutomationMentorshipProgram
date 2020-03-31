@@ -1,16 +1,14 @@
 ﻿using AutomatedTestsBasic.Pages;
 using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace AutomatedTestsBasic.Tests
 {
-    [Author("Igor")]
-    [TestFixture]
-    [Parallelizable(ParallelScope.All)]
+    [Author("Igor"), TestFixture, Parallelizable(ParallelScope.All)]
     class GoogleTests : TestsBasis
     {
-        [Test]
-        [Category("Smoke")]
-        [Category("Regression")]
+        [Test, Category("Smoke"), Category("Regression")]
         public void SearchWord()
         {
             const string searchWord = "Webdriver";
@@ -26,9 +24,7 @@ namespace AutomatedTestsBasic.Tests
                 "Search world is missing in the search results.");
         }
 
-        [Test]
-        [Category("Smoke")]
-        [Category("Regression")]
+        [Test, Category("Smoke"), Category("Regression")]
         public void RandomSearch()
         {
             Pages.GoogleInitialPage
@@ -42,8 +38,7 @@ namespace AutomatedTestsBasic.Tests
                 "Incorrect page title.");
         }
 
-        [Test]
-        [Category("Regression")]
+        [Test, Category("Regression")]
         public void InitialTitle()
         {
             Pages.GoogleInitialPage.Open();
@@ -51,8 +46,7 @@ namespace AutomatedTestsBasic.Tests
             Assert.AreEqual(Pages.GoogleInitialPage.Title, Pages.GoogleInitialPage.GetPageTitle());
         }
 
-        [Test]
-        [Category("Regression")]
+        [Test, Category("Regression")]
         public void BrowserNavigation()
         {
             Pages.GoogleInitialPage
@@ -74,5 +68,21 @@ namespace AutomatedTestsBasic.Tests
             Assert.IsTrue(Pages.GoogleInitialPage.BtnRandomSearch.Displayed,
                 "Random search button is not displayed.");
         }
+
+        //// For testing only.
+        //[TestCase("meta.ua")]
+        //[TestCase("gmail.com")]
+
+        //public void OpenUrl(string url)
+        //{
+        //    IWebDriver driver = new ChromeDriver();
+        //    driver.Navigate().GoToUrl(url);
+        //}
+        //[Test]
+        //public void OpenUrl2()
+        //{
+        //    IWebDriver driver = new ChromeDriver();
+        //    driver.Navigate().GoToUrl("youtube.com");
+        //}
     }
 }
