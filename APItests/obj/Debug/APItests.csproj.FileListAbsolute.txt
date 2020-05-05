@@ -1,0 +1,11 @@
+C:\Users\ivavryk\source\repos\APItests\bin\Debug\APItests.dll
+C:\Users\ivavryk\source\repos\APItests\bin\Debug\APItests.pdb
+C:\Users\ivavryk\source\repos\APItests\bin\Debug\nunit.framework.dll
+C:\Users\ivavryk\source\repos\APItests\bin\Debug\RestSharp.dll
+C:\Users\ivavryk\source\repos\APItests\bin\Debug\nunit.framework.pdb
+C:\Users\ivavryk\source\repos\APItests\bin\Debug\nunit.framework.xml
+C:\Users\ivavryk\source\repos\APItests\bin\Debug\RestSharp.xml
+C:\Users\ivavryk\source\repos\APItests\obj\Debug\APItests.csprojAssemblyReference.cache
+C:\Users\ivavryk\source\repos\APItests\obj\Debug\APItests.csproj.CopyComplete
+C:\Users\ivavryk\source\repos\APItests\obj\Debug\APItests.dll
+C:\Users\ivavryk\source\repos\APItests\obj\Debug\APItests.pdb
